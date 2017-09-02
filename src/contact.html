@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+
+<dom-module id="contact-page">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+
+      @media (max-width: 600px) {
+
+      }
+    </style>
+
+    <p>[[getElementByLang(info,lang)]]
+      <a href="mailto:brainpoweringenieria@gmail.com?Consulta" target="_top">brainpoweringenieria@gmail.com</a>
+    </p>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'contact-page',
+
+        properties: {
+          lang: {
+            type: String,
+            value: 'en',
+            notify: true
+          },
+          info: {
+            type: String,
+            value: {
+              "en": "Please do not hesitate in sending us your questions at: ",
+              "es": "Ante cualquier duda, por favor envienos un email a: "
+            }
+          }
+        },
+        getElementByLang: function(elemRecord, currentLang) {
+          return elemRecord[currentLang];
+        }
+      });
+    })();
+  </script>
+</dom-module>

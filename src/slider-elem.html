@@ -1,0 +1,181 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/paper-styles/typography.html"> -->
+<link rel="import" href="../bower_components/iron-image/iron-image.html">
+
+<dom-module id="slider-elem">
+  <template>
+    <style>
+      :host {
+        display: block;
+        overflow: hidden;
+      }
+      .slider {
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+      }
+      iron-image {
+        width: 100%;
+        min-height: 280px;
+        --iron-image-placeholder: {
+          background: #ddd;;
+        };
+      }
+      img.iron-image {
+        width: 100%;
+        height: 100%;
+      }
+      iron-image.hidden {
+        display: none;
+      }
+      iron-image.current {
+        -webkit-animation: show 6s ;
+        animation: show 6s ;
+      }
+      figure {
+        margin: 0;
+      }
+
+      /*Animation fade */
+      /* Standard syntax */
+      @keyframes show {
+        /*from {opacity:0;}
+        to {opacity:1;}*/
+        0%   {opacity: 0;}
+        15%  {opacity: 1;}
+        85%  {opacity: 1;}
+        100% {opacity: 0;}
+      }
+      /* Chrome, Safari, Opera */
+      @-webkit-keyframes show {
+        /*from {opacity:0;}
+        to {opacity:1;}*/
+        0%   {opacity: 0;}
+        5%  {opacity: 1;}
+        95%  {opacity: 1;}
+        100% {opacity: 0;}
+      }
+
+      @media (max-width: 600px) {
+        iron-image {
+          width: 100%;
+          height: 160px;
+          min-height: 50px;
+        }
+        .slider {
+          width: 100%;
+          height: auto;
+          margin: 0 auto;
+        }
+      }
+    </style>
+
+
+    <div class="slider">
+      <figure>
+        <template is="dom-repeat" items="{{pictures}}">
+          <iron-image src="{{item}}" class="hidden" fade prevent-load
+          preload sizing="contain" alt="" ></iron-image>
+        </template>
+      </figure>
+    </div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+      var isActive = true;
+      Polymer({
+        is: 'slider-elem',
+
+        properties: {
+          // Array of images to be shown
+          pictures: {
+            type: Object
+          },
+          // Current number of the image that is show
+          currentIndex: {
+            type: Number,
+            notify: true
+          },
+          // Array of all the elements images
+          elements: {
+            type: Array,
+            value: []
+          },
+          // The current url to avoid do animation if it is not visible
+          lastPath: {
+            type: String
+          }
+        },
+
+        attached: function() {
+          this.async(function() {
+            var parent = this.getElementsByClassName('slider')[0];
+
+            // The dom-change event signifies when the template has stamped its DOM.
+            //parent.addEventListener('dom-change', function() {
+              // auto-binding template is ready.
+              // this.parentElement.domIsLoaded(this);
+            //});
+            this.domIsLoaded(this);
+
+            //this function prevent to change the slide when this page lost focus to avoid CPU usage.
+            window.onfocus = function () {
+              isActive = true;
+            };
+
+            window.onblur = function () {
+              isActive = false;
+            };
+
+          },1000);
+
+
+        },
+
+        domIsLoaded: function() {
+          this.currentIndex = 0;
+          // this.elements = this.getElementsByTagName('iron-image');
+          this.elements = this.shadowRoot.querySelectorAll("iron-image")
+          this.loadImages();
+          /* It's used to pass themselfe to function */
+          var context = this;
+          setInterval( function() {
+             if(isActive)
+                context.changeImg.call(context)
+          }, 3000 );
+        },
+        loadImages: function() {
+          var arr = (this.elements)
+          for (var i = 0, len = arr.length; i < len; i++) {
+            arr[i].removeAttribute('prevent-load');
+          }
+          var first = this.elements[this.currentIndex];
+          first.classList.add('current');
+          first.classList.remove('hidden');
+        },
+        changeImg: function() {
+          if(location.pathname == this.lastPath || location.pathname == '/') {
+            var prev = this.elements[this.currentIndex];
+            prev.classList.remove('current');
+            prev.classList.add('hidden');
+            this.getNextElem();
+            var next = this.elements[this.currentIndex];
+            next.classList.add('current');
+            next.classList.remove('hidden');
+          }
+        },
+        getNextElem: function() {
+          var next = this.currentIndex + 1;
+          if( next < this.elements.length ) {
+            this.currentIndex = next;
+          }
+          else {
+            this.currentIndex = 0;
+          }
+        },
+      });
+    })();
+  </script>
+</dom-module>

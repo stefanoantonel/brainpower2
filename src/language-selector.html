@@ -1,0 +1,65 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../bower_components/paper-styles/typography.html"> -->
+<link rel="import" href="../bower_components/paper-toggle-button/paper-toggle-button.html">
+
+<dom-module id="language-selector">
+  <template>
+    <style>
+      :host {
+        display: block;
+        width: 110px;
+        height: 15px;
+      }
+      .container-lang-selector {
+        display: flex;
+        justify-content: space-around;
+      }
+      @media (max-width: 600px) {
+
+      }
+    </style>
+
+     <div class="container-lang-selector">
+      
+      <paper-toggle-button on-tap="changeLang" checked="[[isActive]]">
+        <img src='/images/touch/[[lang]]-flag.png'></img>
+      </paper-toggle-button>
+      
+     </div>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'language-selector',
+
+        properties: {
+          lang: {
+            type: String,
+            value: 'es',
+            notify: true
+          },
+          isActive: {
+            type: Boolean,
+            value: false,
+            notify: true
+          }
+        },
+        changeLang: function() {
+          if(this.lang == 'es') {
+            this.lang = 'en',
+            this.isActive = true;
+          }
+          else {
+            this.lang = 'es',
+            this.isActive = false
+          }
+
+        },
+      });
+    })();
+  </script>
+</dom-module>

@@ -1,0 +1,6 @@
+{
+  "name": "brainpower",
+  "short_name": "brainpower",
+  "start_url": "/",
+  "display": "standalone"
+}

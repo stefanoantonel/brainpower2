@@ -1,0 +1,48 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="gallery-elem.html">
+
+<dom-module id="service-detail">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+
+    <div class="service-detail">
+      <div class="description">
+        <b>[[getElementByLang(service.title,lang)]]</b>
+        <br>
+        <b>[[getElementByLang(service.description,lang)]]</b>
+      </div>
+      <div class="image gallery-container">
+        <gallery-elem videos=[[videos]] pictures=[[pictures]]></gallery-elem>
+      </div>
+    </div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'service-detail',
+
+        properties: {
+          lang: {
+            type: String,
+            notify: true,
+          },
+          service: {
+            type: Object
+          },
+          pictures: Object,
+          videos: Object
+        },
+        getElementByLang: function(elemRecord, currentLang) {
+          return elemRecord[currentLang];
+        },
+      });
+    })();
+  </script>
+</dom-module>

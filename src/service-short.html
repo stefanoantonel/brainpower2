@@ -1,0 +1,177 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/paper-styles/typography.html"> -->
+<!-- <link rel="import" href="../slider-elem/slider-elem.html"> -->
+<!-- <link rel="import" href="../../bower_components/iron-image/iron-image.html"> -->
+
+
+<dom-module id="service-short">
+  <template>
+    <style>
+      :host {
+        display: block;
+        --size-height: "200px";
+        --size-width: "200px";
+      }
+      .description {
+        width: 65%;
+      }
+      .image {
+        /*width: 80%;
+        align-self: center;
+        margin: auto;
+        max-height: 200px;
+        height: auto;
+        overflow-y: hidden;*/
+      }
+      .image iron-image {
+        /*width: 100%;
+        height: auto;
+        background-color: lightgray;*/
+      }
+      .service {
+        display: flex;
+        justify-content: space-between;
+      }
+      .service b {
+        font-size: 2.5vw;
+      }
+      slider-elem.slider {
+        border-style: groove;
+      }
+      /*iron-image {
+        width: 300px;
+        height: 200px;
+      }*/
+      .path {
+        display: none;
+      }
+      iron-image.iron-image-custom {
+        width: 100%;
+        height: 200px;
+      }
+      :host ::content iron-image {
+        width: 220px;
+        min-height: 130px;
+        margin-left: 40px;
+        margin-top: 25px;
+      }
+      p {
+        padding-right: 20px;
+        text-align: justify;
+      }
+      .gallery-container {
+        width: 35%;
+      }
+
+      @media (max-width: 700px) {
+        .service {
+          display: block;
+        }
+        .slider {
+          overflow: hidden;
+          /* margin: 00; */
+          /* background-color: red; */
+          height: 200px;
+          width: 100%;
+          margin-top: 10px;
+          border-style: none;
+        }
+        .service p {
+          font-size: 20px;
+          padding-right: 0;
+        }
+        :host ::content iron-image {
+          width: 100%;
+          min-height: 180px;
+          margin: 0 auto;
+        }
+        iron-image.iron-image-custom {
+          width: 100%;
+        }
+        .description {
+          width: 100%;
+        }
+        .gallery-container {
+          width: 100%;
+        }
+        .service b {
+          font-size: 30px;
+        }
+      }
+
+    </style>
+
+    <div class="service">
+      <div class="description">
+        <b>[[getElementByLang(service.title,lang)]]</b>
+        <br>
+        <p>[[getElementByLang(service.description,lang)]]</p>
+      </div>
+      <div class="image gallery-container">
+        <div class="path">{{image}}</div>
+        <!-- <iron-image path="{{image}}" preload fade sizing="contain" alt=""></iron-image> -->
+      </div>
+    </div>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'service-short',
+
+        properties: {
+          lang: {
+            type: String,
+            value: 'en',
+            notify: true
+          },
+          service: Object,
+          selected: {
+            type: String,
+            notify: true
+          },
+          index: {
+            type: Number
+          },
+          image: Object,
+          galleryIsLoaded: {
+            type: Boolean,
+            value: false
+          }
+        },
+
+        getElementByLang: function(elemRecord, currentLang) {
+          return elemRecord[currentLang];
+        },
+        ready: function() {
+          this.image = this.service.images[0].image;
+        },
+        attached: function() {
+          this.createElem()
+        },
+        loadImage: function(element) {
+          if(!this.galleryIsLoaded) {
+            var galleryElem = document.createElement("iron-image")
+            var path = element.shadowRoot.querySelector("div.path")
+            var container = path.parentNode
+            galleryElem.setAttribute("sizing", "contain")
+            galleryElem.setAttribute("preload","")
+            galleryElem.setAttribute("fade","")
+            galleryElem.setAttribute("src",path.innerText)
+            galleryElem.classList.add("iron-image-custom")
+            container.appendChild(galleryElem);
+            this.galleryIsLoaded = true;
+          }
+        },
+        createElem: function() {
+          var serviceShortElem = this
+          if(location.pathname == "/service") {
+            this.loadImage(serviceShortElem);
+          }
+        },
+      });
+    })();
+  </script>
+</dom-module>

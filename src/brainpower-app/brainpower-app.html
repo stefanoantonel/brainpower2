@@ -1,0 +1,32 @@
+<link rel="import" href="../../bower_components/polymer/polymer-element.html">
+
+<dom-module id="brainpower-app">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+    </style>
+    <h2>Hello [[prop1]]!</h2>
+  </template>
+
+  <script>
+    /**
+     * @customElement
+     * @polymer
+     */
+    class BrainpowerApp extends Polymer.Element {
+      static get is() { return 'brainpower-app'; }
+      static get properties() {
+        return {
+          prop1: {
+            type: String,
+            value: 'brainpower-app'
+          }
+        };
+      }
+    }
+
+    window.customElements.define(BrainpowerApp.is, BrainpowerApp);
+  </script>
+</dom-module>

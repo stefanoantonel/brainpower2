@@ -1,0 +1,89 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/paper-styles/typography.html"> -->
+<!-- <link rel="import" href="../facebook-share/facebook-share.html"> -->
+
+<dom-module id="footer-bar">
+  <template>
+    <style >
+      :host {
+        display: block;
+        width: 100%;
+        background-color: var(--color-background);
+        color: white;
+        --color-background: rgb(158, 156, 156);
+        min-height: 49px;
+      }
+      .language-selector {
+        /*float: right;*/
+      }
+      .name {
+        /*display: inline-flex;*/
+        /*flex-grow: 2;*/
+      }
+      b.name {
+        font-size: 20px;
+      }
+      .container {
+        height: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .fb-share-button {
+        width: 20px;
+      }
+      .logo-link {
+        padding: 10px;
+      }
+      .logo-link img {
+        width: 30px;
+        height: 30px;
+      }
+      @media (max-width: 600px) {
+
+      }
+    </style>
+
+    <div class="container">
+      <b class="name">BrainPower &reg;</b>
+      <!-- <facebook-share></facebook-share> -->
+      <a class="logo-link" href="https://www.facebook.com/brainpoweringenieria/" target='_blank'>
+        <img src="../images/logos/facebook.png" alt="Facebook Logo" />
+      </a>
+
+      <language-selector lang='{{lang}}' class="language-selector"></language-selector>
+
+    </div>
+
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'footer-bar',
+
+        properties: {
+          lang: {
+            type: String,
+            value: 'en',
+            notify: true
+          },
+          greet: {
+            type: String,
+            value: 'Welcome!'
+          }
+        },
+        attached: function() {
+          // var dropDownSelector = this.getElementsByTagName('paper-dropdown-menu')[0];
+          //var dropDownSelector = this.shadowRoot.querySelector("language-selector").shadowRoot.querySelector("paper-dropdown-menu")
+          //dropDownSelector.setAttribute('vertical-align','bottom');
+          //dropDownSelector.setAttribute('horizontal-align','right');
+        }
+      });
+    })();
+  </script>
+</dom-module>

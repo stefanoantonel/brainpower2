@@ -1,0 +1,710 @@
+[
+  {
+    "title": {
+      "es": "Diseño de Productos",
+      "en": "Product Design"
+    },
+    "description": {
+      "es": "Si pudo imaginarlo, entonces podemos hacerlo realidad. Partiendo de un concepto básico, se aplican criterios generales del rubro, sumados a conocimientos de Ingeniería, para lograr un diseño enfocado en la manufactura. Todo esto confluye en un conjunto de planos que permiten una precisa y eficaz fabricación de su producto. En otros casos el resultado es un modelo 3D que permite la visualización realística de su producto o quizás un prototipo virtual que puede ser ensayado para analizar su comportamiento en la vida real. Todo esto sin costos innecesarios y garantizando la funcionalidad.",
+
+      "en": "If you can imagine it, we can make it real. We start our work from a basic concept and, by combining both general criteria from the field and Engineering knowledge, we achieve a design focused on manufacture. All this process results in a group of engineering drawings that ensure a precise and effective manufacturing of your product, while avoiding unnecessary costs and guaranteeing its functionality."
+    },
+    "images": [
+      {
+        "image": "images/services/products_design/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/04.png" ,
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/05.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/06.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/07.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/08.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/09.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/10.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/11.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/12.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/13.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/14.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/15.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/16.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/17.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/18.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/19.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/20.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/products_design/21.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Simulaciones Estáticas",
+      "en": "Static Simulations"
+    },
+    "description": {
+      "es": "Las simulaciones estáticas son el primer paso para el cálculo de resistencia física de un componente o estructura, pero muchas veces es el más importante indicador de la eficacia de un diseño dado. Por ello, es recomendable siempre conocer el comportamiento ideal de su diseño antes de fabricar un prototipo. Este servicio es uno de los más utilizados por nuestros clientes por su bajo costo, sencillez, rapidez y alto impacto en las siguientes etapas del diseño hasta la consecución de la fabricación de un prototipo.",
+
+      "en": "Static simulations are the first stage to calculate the resistance of a component or a structure. What is more, many a time these simulations are the first and most important indicator of the effectiveness of a specific design. This is why you should think about the ideal performance you expect from your design before prototyping. This is one of our most requested services due to its low cost, great simplicity and speed, and high impact in the next stages of the design, even when proceeding with the manufacture of a prototype."
+    },
+    "images": [
+      {
+        "image": "images/services/static_simulations/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/static_simulations/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/static_simulations/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/static_simulations/04.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/static_simulations/05.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "fsae_frame-Natural_Frequency_Study_1-Displacement-Displacement3.mp4",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Simulaciones Dinámicas",
+      "en": "Dynamic Simulations"
+    },
+    "description": {
+      "es": "Algunos fenómenos, como la deformación de estructuras de maquinarias o edificios sujetos a fuerzas de viento, no pueden ser considerados como casos de cargas estáticas, por lo que se debe recurrir a los análisis cinemáticos y dinámicos para obtener los comportamientos reales de los mismos. En Brainpower, analizamos su diseño a través de los cálculos de ingeniería para garantizar que el funcionamiento sea exactamente el esperado y no uno cercano al supuesto bajo muchas hipótesis simplificadoras.",
+
+      "en": "Some phenomena, such as the deformation of the machine structure or of buildings subjected to wind forces, can not be considered static load cases. This is the reason why kinematic and dynamic analyses are used to obtain the real performance of such phenomena. In BrainPower, we will analyze your design through Engineering calculations to ensure its expected performance, and not a different one subjected to many hypotheses which simplify it."
+    },
+    "images": [
+      {
+        "image": "images/services/dynamic_simulations/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/dynamic_simulations/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "https://goo.gl/photos/",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "video": "https://goo.gl/photos/",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Análisis Vibratorio",
+      "en": "Vibrational Analysis "
+    },
+    "description": {
+      "es": "La rotura de una copa de cristal con un tono agudo de voz y la rigidez de una estructura civil tienen un denominador común, este es, 'La Mecánica de las Vibraciones'. Es por este motivo que es importante conocer los modos y frecuencias naturales de vibración de sus diseños para evitar fenómenos como resonancia y fatiga prematura debido al comportamiento oscilatorio de los componentes. Conozca la rigidez y comportamiento de su diseño cuando está sometido a vibraciones forzadas por otros componentes.",
+
+      "en": "Both the breaking of a crystal vase due to a soprano’s high C and the stiffness of a civil structure have something in common: The mechanics of vibrations. It is important to know about the modes and natural frequencies of vibration of your designs. In this way, you can avoid phenomena such as resonance and premature fatigue failure, due to the oscillatory behaviour of its components. Through our services, get to know the stiffness and performance of your design when put under vibrations caused by other components."
+    },
+    "images": [
+      {
+        "image": "images/services/calculating_frequencies_and_natural_modes_of_vibration/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Oil and Gas",
+      "en": "Oil and Gas "
+    },
+    "description": {
+      "es": "Contamos con experiencia y conocimientos para diseñar cualquier sistema de tuberias, tanques de almacenamiento y redes de transporte o distribucion en general.",
+
+      "en": "-----translate ------."
+    },
+    "images": [
+      {
+        "image": "images/services/oil_and_gas/00.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/oil_and_gas/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/oil_and_gas/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/oil_and_gas/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/oil_and_gas/04.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/oil_and_gas/05.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Oil and Gas",
+      "en": "Oil and Gas "
+    },
+    "description": {
+      "es": "El método de prueba y error que aun hoy en día se sigue utilizando, ha quedado obsoleto frente al poder del método de los elementos finitos y sus aplicaciones. A través de softwares muy potentes podemos optimizar cualquier componente de su diseño utilizando los criterios que usted desee o los que nosotros consideremos aplicables, haciendolos mas eficientes, económicos y asegurando siempre la funcionalidad.",
+
+      "en": "-----translate ------."
+    },
+    "images": [
+      {
+        "image": "images/services/optimization/00.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/optimization/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/optimization/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/optimization/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/optimization/04.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/optimization/05.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Simulaciones Térmicas",
+      "en": "Thermal Simulations"
+    },
+    "description": {
+      "es": "Muchos factores se ven afectados por los procesos de transferencia de calor; Desde el diseño del asa de una taza hasta la posición de ventiladores de un edificio. Analice el rendimiento de su diseño visualizando estos procesos y su impacto en temperaturas de componentes, resistencias de materiales e incluso confort del ser humano para hacer cambios en las primeras etapas de su diseño, cuando aún los costos son ínfimos. De esta manera, se evitan  las modificaciones sobre sus diseños en etapas avanzadas que podrían ser causantes del fracaso completo de su proyecto.",
+
+      "en": "Many designs are conditioned by heat transfer processes, including the design of a handle in a mug or even the placement of air vents in a building. We can analyze the performance of your design by visualizing these processes and their impact on the temperature of components, resistance of the materials, and even human comfort, to introduce modifications into the first stages of your design when costs are minimal. In this way, we avoid modifications on later stages of the design process, which may result in the complete failure of your project."
+    },
+    "images": [
+      {
+        "image": "images/services/thermal_simulations/00.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Simulaciones de Flujo de Fluidos",
+      "en": "Fluid Flow Simulations (CFD)"
+    },
+    "description": {
+      "es": "A través de potentes herramientas de Dinámica de Fluidos Computacional (CFD), su diseño puede ser evaluado para las condiciones de trabajo que sufrirá en la vida real. Desde la transferencia de calor por convección de un componente electrónico en una máquina, pasando por cargas de viento en estructuras y edificios, hasta la perdida de carga o el flujo volumétrico a través de un componente hidráulico. Todo ello puede ser analizado e incluso visualizado de forma intuitiva para la comprensión absoluta de su diseño, con el objetivo de mejorar su rendimiento",
+
+      "en": "Our company will test your design through powerful Computational Fluid Dynamics (CFD) tools to check if it can resist the working conditions it will face in real life. Whether it is the convective heat transfer in an electronic component of a machine, the wind load in structures and buildings, the pressure drop or the volumetric flow rate of a component, we can analyze and visualyze all these features and more in an intuitive way to understand and improve your design."
+    },
+    "images": [
+      {
+        "image": "images/services/simulations_of_fluid_flows/00.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/simulations_of_fluid_flows/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/simulations_of_fluid_flows/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Cálculos de Ingeniería ",
+      "en": "Engineering Calculations "
+    },
+    "description": {
+      "es": "Nuestros ingenieros están capacitados para ofrecerle resultados precisos y con una gran dosis de criterio. Ya sea que necesite un simple cálculo de un resorte, el tamaño requerido para una soldadura en un componente, o el rendimiento volumétrico de una bomba para petróleo, ellos podrán resolverlo eficazmente. Háganos su consulta sin compromiso.",
+
+      "en": "Our engineers are qualified to offer you precise results with high criteria on the subject, including simple spring calculations, the required size for a welding in a component, or the volumetric efficiency of a beam pump. Should you have a question, please contact us."
+    },
+    "images": [
+      {
+        "image": "images/services/engineering_calculations/00.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/engineering_calculations/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/engineering_calculations/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/engineering_calculations/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Cálculos de Estructuras",
+      "en": "Structure Calculations"
+    },
+    "description": {
+      "es": "Tanto  los soportes necesarios para una máquina, como la cantidad de bulones requeridos en un tablero de un puente, y hasta la deformación completa de una nave industrial pueden ser calculados por nuestros ingenieros más experimentados.",
+
+      "en": "Our most experienced engineers are able to calculate several features, including the support needed for a machine, the number of bolts required for a bridge deck, and the complete deformation of an industrial unit."
+    },
+    "images": [
+      {
+        "image": "images/services/calculation_of_structures/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/calculation_of_structures/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/calculation_of_structures/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/calculation_of_structures/04.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/calculation_of_structures/05.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+  {
+    "title": {
+      "es": "Animaciones Computacionales",
+      "en": "Computational Animation"
+    },
+    "description": {
+      "es": "La frase 'no tengo la bola de cristal' ha quedado obsoleta gracias a las animaciones computarizadas. Estas herramientas permiten visualizar y analizar sus conceptos de diseño, combinaciones de eventos e incluso procesos completos de fabricación o ensamblaje sin ni siquiera comprar un tornillo. Así, podemos corregir errores o mejorar secuencias para asegurar la calidad, eficiencia, sincronización y seguridad en sus procesos, con costos sorprendentemente bajos.",
+
+      "en": "We do not need a crystal ball anymore to visualize your designs, thanks to computational animation. This technique allows us to visualize and analyze your design concepts, event combinations, and even whole manufacturing and assembling processes, without even buying a single screws. In this way, we can correct errors or improve sequences at very low costs to enhance quality, efficiency, synchronization and security in your processes."
+    },
+    "images": [
+      {
+        "image": "images/services/computer_animation/00.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/computer_animation/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "https://gogl",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Construcción de Piezas Soldadas ",
+      "en": "Production of Welded Parts"
+    },
+    "description": {
+      "es": "Desde el diseño hasta la fabricación completa de piezas de chapa metálica, perfiles estructurales, chapas punzonadas o plegadas, piezas cortadas por plasma o láser y componentes soldados, nuestro Partners Metalúrgica GHEA S.A. con más de 40 años en el mercado argentino, nos brinda su apoyo y facilidades para el desarrollo y construcción de su proyecto.",
+
+      "en": "Partners Metalúrgica GHEA S.A. is a company with over 40 years of experience in the argentinean market. It collaborates with us for the development and manufacturing of your project, including not only the design, but also the complete manufacture of sheet metal parts, structural profiles, perforated steel plates, plasma cut parts and welded components."
+    },
+    "images": [
+      {
+        "image": "images/services/weldment_construction/01.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/weldment_construction/02.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/weldment_construction/03.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/weldment_construction/04.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      },
+      {
+        "image": "images/services/weldment_construction/05.png",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ],
+    "videos": [
+      {
+        "video": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  }
+]

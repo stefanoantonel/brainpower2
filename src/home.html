@@ -1,0 +1,319 @@
+<!--
+@license
+Copyright (c) 2016 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/app-route/app-location.html">
+<link rel="import" href="../bower_components/app-route/app-route.html">
+<!-- <link rel="import" href="../bower_components/app-layout/app-drawer-layout/app-drawer-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-drawer/app-drawer.html"> -->
+<link rel="import" href="../bower_components/app-layout/app-scroll-effects/app-scroll-effects.html">
+<!-- <link rel="import" href="../bower_components/app-layout/app-header/app-header.html">
+<link rel="import" href="../bower_components/app-layout/app-header-layout/app-header-layout.html">
+<link rel="import" href="../bower_components/app-layout/app-toolbar/app-toolbar.html"> -->
+<link rel="import" href="../bower_components/paper-icon-button/paper-icon-button.html">
+<link rel="import" href="../bower_components/iron-pages/iron-pages.html">
+<link rel="import" href="../bower_components/iron-selector/iron-selector.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="../bower_components/paper-material/paper-material.html">
+<link rel="import" href="my-icons.html">
+
+<link rel="import" href="header-bar.html">
+<link rel="import" href="my-greeting.html">
+<link rel="import" href="about-us.html">
+<link rel="import" href="footer-bar.html">
+
+<dom-module id="home-app">
+
+  <template>
+
+    <style>
+
+      :host {
+        display: block;
+        --app-primary-color: #4285f4;
+        --app-secondary-color: black;
+      }
+
+      app-header {
+        background-color: var(--app-primary-color);
+        color: #fff;
+      }
+      app-header paper-icon-button {
+        --paper-icon-button-ink-color: white;
+      }
+
+      .drawer-list {
+        margin: 0 20px;
+      }
+      .drawer-list a {
+        display: block;
+        padding: 0 16px;
+        line-height: 40px;
+        text-decoration: none;
+        color: var(--app-secondary-color);
+      }
+      .drawer-list a.iron-selected {
+        color: black;
+        font-weight: bold;
+      }
+      .drawer-list a.subroute {
+        padding-left: 32px;
+      }
+      paper-material {
+        border-radius: 2px;
+        height: 100%;
+        padding: 16px 0 16px 0;
+        width: calc(98.66% - 16px);
+        margin: 16px auto;
+        background: rgba(255, 255, 255, 0.5);
+      }
+      .page-title {
+        @apply(--paper-font-display2);
+      }
+      paper-scroll-header-panel div.content {
+        height: auto;
+      }
+      paper-menu a > *, paper-menu paper-item > *, paper-menu paper-icon-item > * {
+        pointer-events: none;
+      }
+
+      .language-selector-bottom {
+        display: none;
+      }
+
+      paper-menu {
+        --paper-menu-selected-item: {
+          color: var(--primary-color);
+        }
+
+        --paper-menu-focused-item-after: {
+          background: var(--primary-color);
+        }
+      }
+
+      paper-menu iron-icon {
+        margin-right: 33px;
+        opacity: 0.54;
+      }
+
+      paper-menu a {
+        @apply(--layout-horizontal);
+        @apply(--layout-center);
+
+        text-decoration: none;
+        color: var(--menu-link-color);
+        /*font-family: 'Roboto', 'Noto', sans-serif;*/
+        -webkit-font-smoothing: antialiased;
+        text-rendering: optimizeLegibility;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 24px;
+        min-height: 48px;
+        padding: 0 16px;
+      }
+      paper-material {
+        border-radius: 2px;
+        height: 100%;
+        padding: 16px 0 16px 0;
+        width: calc(98.66% - 16px);
+        margin: 16px auto;
+        background-color: black;
+      }
+
+      .app-menu {
+        --paper-menu-selected-item: {
+          color: #fff;
+          background: var(--light-primary-color);
+        }
+      }
+
+      paper-menu a > *, paper-menu paper-item > *, paper-menu paper-icon-item > * {
+        pointer-events: none;
+      }
+
+      @media (max-width: 600px) {
+        .page-title {
+          font-size: 24px!important;
+        }
+        .language-selector-bottom {
+          float: right;
+          display: flex;
+        }
+        paper-material {
+          --menu-container-display: none;
+          width: calc(97.33% - 32px);
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+
+      /* Tablet+ */
+      @media (min-width: 601px) {
+
+        iron-pages {
+          padding: 48px 62px;
+        }
+
+        paper-material {
+          width: calc(98% - 46px);
+          margin-bottom: 32px;
+          padding-left: 30px;
+          padding-right: 30px;
+        }
+      }
+      /* Height of the scroll area */
+      /*.content {
+        height: 900px;
+        min-height: 100%;
+      }*/
+
+    </style>
+
+    <app-location route="{{route}}"></app-location>
+    <app-route
+        route="{{route}}"
+        pattern="/:page"
+        data="{{routeData}}"
+        tail="{{subroute}}"></app-route>
+
+    <header-bar lang='{{lang}}' title=[[title]]></header-bar>
+
+    <div class="content">
+      <!-- <iron-pages role="main" selected="[[page]]" attr-for-selected="name"> -->
+      <iron-pages role="main" id="main-pages" selected="[[page]]" attr-for-selected="data-route">
+
+        <section data-route="home">
+          <paper-material elevation="1">
+            <my-greeting lang="[[lang]]"></my-greeting>
+            <about-us-elem lang="[[lang]]"></about-us-elem>
+          </paper-material>
+        </section>
+
+        <section data-route="contact">
+          <paper-material elevation="1">
+            <h2 class="page-title">Contact</h2>
+            <contact-page lang="[[lang]]"></contact-page>
+          </paper-material>
+        </section>
+
+        <section data-route="product">
+          <paper-material elevation="1">
+            <h2 class="page-title">Products</h2>
+            <p>This is the product section</p>
+          </paper-material>
+        </section>
+
+        <section data-route="service">
+          <service-section lang="[[lang]]"></service-section>
+        </section>
+
+        <section data-route="detail">
+          <paper-material elevation="1" >
+            <service-detail id="service-detail"></service-detail>
+          </paper-material>
+        </section>
+
+        <section data-route="motorsport">
+          <motor-sport lang="[[lang]]" title="{{title}}"></motor-sport>
+        </section>
+      </iron-pages>
+    </div>
+
+    <footer-bar lang='{{lang}}'></footer-bar>
+
+    <!-- <app-drawer-layout fullbleed> -->
+
+      <!-- Drawer content -->
+      <!-- <app-drawer>
+        <app-toolbar>Menu</app-toolbar>
+        <iron-selector selected="[[page]]" attr-for-selected="name" class="drawer-list" role="navigation">
+          <a name="view1" href="/view1">View One</a>
+          <a name="view2" href="/view2">View Two</a>
+          <a name="view3" href="/view3">View Three</a>
+        </iron-selector>
+      </app-drawer> -->
+
+
+
+      <!-- Main content -->
+      <!-- <app-header-layout has-scrolling-region> -->
+
+        <!-- <app-header condenses reveals effects="waterfall">
+          <app-toolbar>
+            <paper-icon-button icon="menu" drawer-toggle></paper-icon-button>
+            <div title>My App</div>
+          </app-toolbar>
+        </app-header> -->
+
+
+
+      <!-- </app-header-layout> -->
+
+    <!-- </app-drawer-layout> -->
+
+  </template>
+
+  <script>
+
+    Polymer({
+
+      is: 'home-app',
+
+      properties: {
+
+        page: {
+          type: String,
+          reflectToAttribute: true,
+          observer: '_pageChanged'
+        },
+        lang: {
+          type: String,
+          value: "es"
+        }, 
+        title: {
+          type: String,
+          value: 'BrainPower',
+        },
+        motorsport: {
+            type: String, 
+            value: 'BrainPower - Motorsport'
+        },
+        brainpower: {
+            type: String, 
+            value: 'BrainPower'
+        }
+
+      },
+
+      observers: [
+        '_routePageChanged(routeData.page)'
+      ],
+
+      _routePageChanged: function(page) {
+        this.page = page || 'home';
+      },
+
+      _pageChanged: function(page) {
+        if(page == 'motorsport') {
+            this.title = this.motorsport;
+        }
+        else {
+            this.title = this.brainpower;
+        }
+        // load page import on demand.
+        this.importHref(
+          this.resolveUrl(page + '.html'), null, null, true);
+      }
+
+    });
+
+  </script>
+
+</dom-module>

@@ -1,0 +1,298 @@
+{
+  "aboutUs": {
+      "title": {
+        "es": "Quienes Somos:",
+        "en": "About Us"
+      },
+      "description": {
+        "es": "Somos un equipo de profesionales que se conoció en la universidad, mientras estudiába Ingeniería Mecánica, que discutía apasionadamente sobre automóviles, motores, maquinas, etc. Y que compartía una visión en lo referido al diseño de máquinas y productos, criterios y la ambición de poder en un futuro, ser diseñadores de mejores productos, con mayor calidad y mejor funcionalidad. Luego, este equipo se fue ampliando gracias a nuestros contactos profesionales de otras ramas y gente con mucha experiencia en distintos rubros de la industria.",
+        "en": ""
+      }
+  },
+  "policy": {
+      "title": {
+        "es": "Políta de Confidencialidad:",
+        "en": "Confidentiality agreement:"
+      },
+      "description": {
+        "es": "Nuestro trabajo es desarrollar tus productos, materializar tus ideas, o satisfacer tus necesidades, por este motivo, tus diseños, ideas, proyectos y documentación son igual o mas importantes que para vos; por ésto, en BrainPower cuidamos minuciosamente la información que se nos brinda como lo hacemos con la propia. Esto, se ve plasmado en el 'Acuerdo de Confidencialidad' que firmamos con cada nuevo cliente",
+        "en": ""
+      }
+  },
+  "mission": {
+      "title": {
+        "es": "Nuestra Mision:",
+        "en": "Mission:"
+      },
+      "description": {
+        "es": "Entusiasmar a nuestros clientes en todo el mundo con productos innovadores, confiables y amigables con el medio ambiente, así como con servicios de eficientes y de calidad para obtener resultados sobresalientes",
+        "en": ""
+      }
+  },
+  "vision": {
+      "title": {
+        "es": "Nuestra Visión:",
+        "en": "Vision:"
+      },
+      "description": [
+        {
+          "es": "En BranPower utilizamos tecnología de punta para aprovechar las ventajas que nos da el avance en la ciencia y la técnica, para poder lograr desarrollos rapidos, económicos, de alta calidad y respetuosos del medio ambiente.",
+          "en": ""
+        },   {
+          "es": "Somos un socio comercial atractivo para proveedores y concesionarios, estableciendo con ellos relaciones sustentables.",
+          "en": ""
+        },
+        {
+          "es": " Somos un equipo de colaboradores competentes y comprometidos, que nunca está satisfecho con sus resultados y que se propone una exigente mejora continua.",
+          "en": ""
+        }, 
+        {
+          "es": "Contamos con amplios conocimientos técnicos, sóidas bases teóricas y vasta experiencia práctica que nos permite encontrar soluciones ingeniosas, simples y eficaces a sus problemas.",
+          "en": ""
+        }, 
+        { 
+          "es": "BrainPower aspira a ser un socio comercial atractivo para un amplio mercado que involucra al diseño, cálculo y optimización de productos y procesos inmersos en el mundo globalizado de hoy y de mañana.",
+          "en": ""
+        }
+      ]
+  },
+  "whatWeDo": {
+      "title": {
+        "es": "Que hacemos:",
+        "en": "What we do"
+      },
+      "description": {
+        "es": "En BrainPower utilizamos la creatividad, la ingeniería, el sentido común, criterio y coherencia, como herramientas fundamentales para resolver cualquier problema que enfrentemos. Nuestros clientes confían en nosotros para: ",
+        "en": ""
+      },
+      "jobs": [   {
+          "es": "Consultoría",
+          "en": ""
+        },
+        {
+          "es": "Asesoramiento Profesional",
+          "en": ""
+        },
+        {
+          "es": "Bosquejos Conceptuales",
+          "en": ""
+        },
+        {
+          "es": "Diseños Esquemáticos",
+          "en": ""
+        },
+        {
+          "es": "Generación de Planos de Fabricación",
+          "en": ""
+        },
+        {
+          "es": "Ingeniería de Detalle",
+          "en": ""
+        },
+        {
+          "es": "Simulaciones Estáticas",
+          "en": ""
+        },
+        {
+          "es": "Simulaciones Dinámicas",
+          "en": ""
+        },
+        {
+          "es": "Análisis de Mecanismos",
+          "en": ""
+        },
+        {
+          "es": "Análisis Vibracional",
+          "en": ""
+        },
+        {
+          "es": "Cálculos de Resistencia de Componentes",
+          "en": ""
+        },
+        {
+          "es": "Análisis de Durabilidad de Producto (fatiga)",
+          "en": ""
+        },
+        {
+          "es": "Digitalización 3D",
+          "en": ""
+        },
+        {
+          "es": "Impresión 3D",
+          "en": ""
+        },
+        {
+          "es": "Animaciones Computarizadas",
+          "en": ""
+        },
+        {
+          "es": "Simulación de Procesos",
+          "en": ""
+        },
+        {
+          "es": "Calculos de Ingeniería",
+          "en": ""
+        },
+        {
+          "es": "Calculos Estadísticos",
+          "en": ""
+        },
+        {
+          "es": "Análisis de Viabilidad de Técnica",
+          "en": ""
+        },
+        {
+          "es": "Análisis de Impacto Ambiental de Proyectos",
+          "en": ""
+        },
+        {
+          "es": "Simulaciones Térmicas",
+          "en": ""
+        },
+        {
+          "es": "Dinámica de Fluidos Computacional (CFD)",
+          "en": ""
+        },
+        {
+          "es": "CAD / CAM / CAE",
+          "en": ""
+        },
+        {
+          "es": "Renderizados",
+          "en": ""
+        },
+        {
+          "es": "Recorridos Virtuales",
+          "en": ""
+        },
+        {
+          "es": "Cálculo Estructural",
+          "en": ""
+        },
+        {
+          "es": "Análisis Económico de Proyecto",
+          "en": ""
+        },
+        {
+          "es": "Diseño de Prototipos",
+          "en": ""
+        },
+        {
+          "es": "Validación de Productos",
+          "en": ""
+        }
+      ]
+  },
+  "ourClients": {
+      "title": {
+        "es": "Nuestos Clientes:",
+        "en": "Our Clients:"
+      },
+      "description": {
+        "es": "Estos son algunos de nuestros clientes",
+        "en": ""
+      },
+      "companies": [   {
+          "logo": "../images/logos/ghea.jpg",
+          "link": "http://www.facebook.com/metalurgicaghea.antonel"
+        },
+        {
+          "logo": "../images/logos/renault.jpg",
+          "link": "https://www.renault.com.ar"
+        },
+        {
+          "logo": "../images/logos/arcor.jpg",
+          "link": "http://www.arcor.com.ar/"
+        },
+        {
+          "logo": "../images/logos/vw.jpg",
+          "link": "http://www.volkswagen.com.ar/"
+        },
+        {
+          "logo": "../images/logos/roggio1.jpg",
+          "link": "http://www.roggio.com.ar/"
+        },
+        {
+          "logo": "../images/logos/alucor.png",
+          "link": "http://www.alucor-aluminios.com.ar/"
+        },
+
+        {
+          "logo": "",
+          "link": ""
+        }
+      ]
+  },
+  "ourPartners": {
+      "title": {
+        "es": "Nuestos Socios:",
+        "en": "Our Partners:"
+      },
+      "description": {
+        "es": "Estos son algunos de nuestros socios comerciales",
+        "en": ""
+      },
+      "companies": [   {
+          "logo": "../images/logos/performance-trend.png",
+          "link": "http://performancetrends.com/"
+        },
+        {
+          "logo": "../images/logos/autocad.png",
+          "link": "http://www.autodesk.com/products/autocad/overview"
+        },
+        {
+          "logo": "../images/logos/simulation-mechanical.jpg",
+          "link": "http://www.autodesk.com/products/simulation-mechanical/overview"
+        },
+        {
+          "logo": "../images/logos/robot-structural.jpg",
+          "link": "http://www.autodesk.com/products/robot-structural-analysis/overwiew"
+        },
+        {
+          "logo": "../images/logos/inventor.png",
+          "link": "http://www.autodesk.com/products/inventor/overview"
+        },
+        {
+          "logo": "../images/logos/nastran.png",
+          "link": "http://www.autodesk.com/products/nastran-in-cad/overview"
+        },
+
+        {
+          "logo": "../images/logos/solidworks.gif",
+          "link": "http://www.solidworks.com/"
+        },
+        {
+          "logo": "../images/logos/solidworks-simulation.jpg",
+          "link": "https://www.solidworks.com/sw/products/simulation/packages.htm"
+        },
+        {
+          "logo": "../images/logos/solidworks-flow.png",
+          "link": "https://www.solidworks.com/sw/products/simulation/flow-simulation.htm"
+        },
+        {
+          "logo": "../images/logos/solidworks.gif",
+          "link": "https://www.solidworks.com/sw/industries/mechanical-design-industries.htm"
+        },
+        {
+          "logo": "../images/logos/catia.png",
+          "link": "http://www.3ds.com/products-services/catia/"
+        },
+        {
+          "logo": "../images/logos/msc-nastran.png",
+          "link": "http://www.mscsoftware.com/product/msc-nastran"
+        },
+        {
+          "logo": "../images/logos/abacus.png",
+          "link": "http://www.3ds.com/products-services/simulia/products/abaqus/"
+        },
+        {
+          "logo": "../images/logos/simulia.png",
+          "link": "http://www.3ds.com/products-services/simulia/"
+        },
+        {
+          "logo": "../images/logos/dynomation.jpg",
+          "link": "http://www.motionsoftware.com/Dynomation5.htm"
+        }
+      ]
+  }
+}

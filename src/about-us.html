@@ -1,0 +1,171 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+
+<dom-module id="about-us-elem">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      h2 {
+        margin-bottom: 5px;
+      }
+      .jobs-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      ol.about-us-elem {
+        min-width: 35%;
+      }
+      p {
+        text-align: justify;
+      }
+      b {
+        width: 45%;
+        text-align: center;
+        margin-top: 15px;
+      }
+      .logo {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+      .logo a {
+        margin: 30px;
+        background-color: white;
+      }
+      @media (max-width: 800px) {
+        b {
+          width: 100%;
+          text-align: center;
+          margin-top: 15px;
+          font-size: 18px;
+        }
+        p {
+          font-size: 20px;
+        }
+        .logo a {
+          margin: 10px;
+          overflow: hidden;
+        }
+        .logo-img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    </style>
+
+    <iron-ajax
+      auto
+      url='../assets/about-us.json'
+      params='{"alt":"json", "q":"chrome"}'
+      handle-as="json"
+      on-response="handleResponse"
+      debounce-duration="300">
+    </iron-ajax>
+    
+    <div class="about-us">
+      <h2 class="page-title">[[getElementByLang(info.aboutUs.title,lang)]]</h2>
+      <p>[[getElementByLang(info.aboutUs.description,lang)]]</p>
+    </div>
+
+    <div class="jobs">
+      <h2 class="page-title">[[getElementByLang(info.whatWeDo.title,lang)]]</h2>
+      <p>[[getElementByLang(info.whatWeDo.description,lang)]]</p>
+      <div class="jobs-container">
+        <template is="dom-repeat" items="[[info.whatWeDo.jobs]]">
+          <b>[[getElementByLang(item,lang)]]</b>
+        </template>
+      </div>
+    </div>
+
+    <div class="partners-container">
+      <h2 class="page-title">[[getElementByLang(info.ourPartners.title,lang)]]</h2>
+      <p>[[getElementByLang(info.ourPartners.description,lang)]]</p>
+      <div class="logo">
+        <template is="dom-repeat" items="[[info.ourPartners.companies]]">
+          <a class="logo-link" href="[[item.link]]" target='_blank'>
+            <img class="logo-img" name="[[item.logo]]" alt=""/>
+          </a>
+        </template>
+      </div>
+    </div>
+
+    <div class="clients-container">
+      <h2 class="page-title">[[getElementByLang(info.ourClients.title,lang)]]</h2>
+      <p>[[getElementByLang(info.ourClients.description,lang)]]</p>
+      <div class="logo">
+        <template is="dom-repeat" items="[[info.ourClients.companies]]">
+          <a class="logo-link" href="[[item.link]]" target='_blank'>
+            <img class="logo-img" name="[[item.logo]]" alt=""/>
+          </a>
+        </template>
+      </div>
+    </div>
+
+     <div class="policy-container">
+      <h2 class="page-title">[[getElementByLang(info.policy.title,lang)]]</h2>
+      <p>[[getElementByLang(info.policy.description,lang)]]</p>
+    </div>
+
+    <div class="mission-container">
+      <h2 class="page-title">[[getElementByLang(info.mission.title,lang)]]</h2>
+      <p>[[getElementByLang(info.mission.description,lang)]]</p>
+    </div>
+    
+    <div class="vision-container">
+      <h2 class="page-title">[[getElementByLang(info.vision.title,lang)]]</h2>
+      <template is="dom-repeat" items="[[info.vision.description]]">
+        <p>[[getElementByLang(item,lang)]]</p>
+      </template>
+    </div>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'about-us-elem',
+
+        properties: {
+          info: {
+            type: Object,
+            value: {}
+          }
+        },
+        
+        handleResponse: function(event, res) {
+          this.info = res.response;
+        },
+
+        attached: function() {
+          this.async(function() {
+            var imgPartners = this.shadowRoot.querySelectorAll(".partners-container img")
+            var imgClients = this.shadowRoot.querySelectorAll(".clients-container img")
+            for (var i = 0; i < imgClients.length; i++) {
+              //Getting the source of the image
+              var el = imgClients[i];
+              //loading the image
+              el.src = el.name;
+            }
+            for (var i = 0; i < imgPartners.length; i++) {
+              //Getting the source of the image
+              var el = imgPartners[i];
+              //loading the image
+              el.src = el.name;
+            }
+          },1500);
+        },
+        getElementByLang: function(elemRecord, currentLang) {
+          if(elemRecord) {
+            return elemRecord[currentLang];
+          }
+        },
+      });
+    })();
+  </script>
+</dom-module>

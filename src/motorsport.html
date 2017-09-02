@@ -1,0 +1,115 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/paper-styles/typography.html"> -->
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="service-short.html">
+
+<dom-module id="motor-sport">
+  <template>
+    <style>
+      :host {
+        display: block;
+      }
+      index {
+        display: none;
+      }
+      a {
+        text-decoration: inherit;
+        color: inherit;
+      }
+      paper-material {
+        border-radius: 2px;
+        height: 100%;
+        padding: 16px 0 16px 0;
+        padding: 16px;
+        margin: 16px auto;
+        background: rgba(255, 255, 255, 0.05);
+      }
+      .spinner {
+        text-align: center;
+      }
+    </style>
+    <div class="spinner">
+      <h1>Loading...</h1>
+    </div>
+    <iron-ajax
+        auto
+        url='../assets/motorsport.json'
+        params='{"alt":"json", "q":"chrome"}'
+        handle-as="json"
+        on-response="handleResponse"
+        debounce-duration="300">
+    </iron-ajax>
+    <!-- class="fullbleed layout vertical" -->
+
+    <div class="service-short-section">
+      <template is="dom-repeat" items="{{services}}">
+        <a href="{{baseUrl}}detail" on-tap="showDetails">
+          <paper-material elevation="1">
+            <index>{{index}}</index>
+            <service-short service="{{item}}" lang="{{lang}}"></service-short>
+          </paper-material>
+        </a>
+      </template>
+    </div>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+      Polymer({
+        is: 'motor-sport',
+
+        properties: {
+          lang: {
+            type: String,
+            value: 'en',
+            notify: true
+          },
+          services: {
+            type: Object
+          },
+          selected: {
+            type: Number,
+            value: 0
+          },
+          galleryIsLoaded: {
+            type: Boolean,
+            value: false
+          }, 
+          title: {
+            type: String
+          },
+
+          galleryElem: String,
+          mainPages: Object,
+          serviceSelected: Object,
+        },
+        handleResponse: function(event, res) {
+          this.services = res.response;
+          this.shadowRoot.querySelector(".spinner").remove();
+        },
+        loadGallery: function(element) {
+          var body = document.getElementsByTagName("home-app")[0].shadowRoot;
+          var detail = body.getElementById("service-detail");
+          detail.pictures = element.serviceSelected.images;
+          detail.videos = element.serviceSelected.videos;
+        },
+        showDetails: function(e) {
+          // var index = e.currentTarget.getElementsByTagName("index")[0].innerHTML;
+          var index = e.currentTarget.querySelector("index").innerHTML
+          this.serviceSelected = this.services[index];
+          // var mainPages = document.getElementById("main-pages");
+          // var detailElem = mainPages.getElementsByTagName("service-detail")[0];
+          var gallery = this.loadGallery(this)
+        },
+        created: function() {
+          this.title = "BrainPower - Motorsport";
+        },
+        attached: function() {
+          this.title = "BrainPower - Motorsport";
+        }
+      });
+    })();
+  </script>
+</dom-module>

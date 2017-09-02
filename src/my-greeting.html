@@ -1,0 +1,198 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/paper-styles/typography.html"> -->
+<link rel="import" href="slider-elem.html">
+
+<!--
+@license
+Copyright (c) 2015 The Polymer Project Authors. All rights reserved.
+This code may only be used under the BSD style license found at http://polymer.github.io/LICENSE.txt
+The complete set of authors may be found at http://polymer.github.io/AUTHORS.txt
+The complete set of contributors may be found at http://polymer.github.io/CONTRIBUTORS.txt
+Code distributed by Google as part of the polymer project is also
+subject to an additional IP rights grant found at http://polymer.github.io/PATENTS.txt
+-->
+
+<dom-module id="my-greeting">
+  <template>
+    <style >
+      :host {
+        display: flex;
+        justify-content: space-around;
+      }
+
+      span,
+      input {
+        @apply(--paper-font-body2);
+      }
+      .text-container {
+        width: 45%;
+      }
+      .slider-container {
+        width: 77%;
+      }
+      slider-component {
+        width: 60%;
+        height: 220px;
+        overflow: hidden;
+      }
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background: #FFF;
+      }
+      @media (max-width: 800px) {
+        :host {
+          display: block;
+        }
+        .text-container {
+          width: 100%;
+        }
+        .slider-container {
+          width: 100%;
+          border-style: none;
+          margin-top: 10px;
+          min-height: 150px;
+        }
+        p {
+          font-size: 20px;
+        }
+      }
+    </style>
+
+
+    <div class="text-container">
+      <h2 class="page-title">[[getElementByLang(subtitle1,lang)]]</h2>
+      <p>[[getElementByLang(subtitle2,lang)]]</p>
+    </div>
+
+    <div class="slider-container">
+      <slider-elem last-path="/home" pictures="{{pictures}}"></slider-elem>
+    </div>
+
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'my-greeting',
+
+        properties: {
+          greeting: {
+            type: String,
+            value: 'BrainPower!'
+          },
+          pictures: {
+            type: Array,
+            value: [
+              '../images/services/products_design/01.png',
+              '../images/services/products_design/02.png',
+              '../images/services/static_simulations/04.png',
+              '../images/services/static_simulations/03.png',
+              '../images/services/calculation_of_structures/02.png'
+            ]
+          },
+          subtitle1: {
+            type: Object,
+            value: {
+              "es": "Si pudo imaginarlo, nosotros podemos hacerlo realidad.",
+              "en": "The brain power advocated to the engineering"
+            }
+          },
+          subtitle2: {
+            type: Object,
+            value: {
+              "es": "En BrainPower aplicamos el arte de la Ingeniería para diseñar, optimizar y construir sus sueños.",
+              "en": "The brain power advocated to the engineering"
+            }
+          },
+          aboutUs: {
+            type: Object,
+            value: {
+              "title": {
+                "es": "Quienes Somos:",
+                "en": "About Us"
+              },
+              "description": {
+                "es": "Somos un equipo de profesionales que se conoció mientras cursába la carrera de Ingeniería Mecánica, época en la que discutíamos apasionadamente sobre automóviles, motores, maquinas, etc. Desde entonces compartimos una visión en lo referido al diseño de maquinas y productos, criterios y la ambición de poder en un futuro, ser nosotros los diseñadores de mejores productos, con mayor calidad y mejor funcionalidad. Luego, este equipo se fue ampliando con profesionales de otras ramas y gente con mucha experiencia en distintos rubros de la industria.",
+                "en": ""
+              }
+            }
+          },
+          whatWeDo: {
+            type: Object,
+            value: {
+              "title": {
+                "es": "Que hacemos:",
+                "en": "What we do"
+              },
+              "description": {
+                "es": "En BrainPower utilizamos la creatividad, la ingeniería, el sentido común, criterio y coherencia, como herramientas fundamentales para resolver cualquier problema que enfrentemos. Nuestros clientes confían en nosotros para: ",
+                "en": "",
+                "jobs": [
+                  {
+                    "es": "Consultas",
+                    "en": ""
+                  },
+                  {
+                    "es": "Asesoramiento Profesional",
+                    "en": ""
+                  },
+                  {
+                    "es": "Bosquejos Conceptuales",
+                    "en": ""
+                  },
+                  {
+                    "es": "Diseños Esquemáticos",
+                    "en": ""
+                  },
+                  {
+                    "es": "Generación de Planos de Fabricación",
+                    "en": ""
+                  },
+                  {
+                    "es": "Ingeniería de Detalle",
+                    "en": ""
+                  },
+                  {
+                    "es": "Simulaciones  , cálculos y hasta fabricación de productos o entrega de proyectos llave en mano..",
+                    "en": ""
+                  },
+                  {
+                    "es": "Ingeniería de Detalle",
+                    "en": ""
+                  },
+                  {
+                    "es": "Ingeniería de Detalle",
+                    "en": ""
+                  },
+                  {
+                    "es": "Ingeniería de Detalle",
+                    "en": ""
+                  },
+                  {
+                    "es": "Ingeniería de Detalle",
+                    "en": ""
+                  },
+                ]
+              }
+            }
+          },
+
+        },
+        getElementByLang: function(elemRecord, currentLang) {
+          return elemRecord[currentLang];
+        },
+      });
+    })();
+  </script>
+</dom-module>

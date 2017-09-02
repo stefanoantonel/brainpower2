@@ -1,0 +1,242 @@
+<link rel="import" href="../bower_components/polymer/polymer.html">
+<!-- <link rel="import" href="../../bower_components/paper-styles/typography.html"> -->
+<link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
+<link rel="import" href="../bower_components/paper-tabs/paper-tab.html">
+<link rel="import" href="language-selector.html">
+
+
+<dom-module id="header-bar">
+  <template>
+    <style>
+      :host {
+        display: block;
+        --color-selected: rgba(45, 45, 45, 0.6);
+        --color-background: rgba(158, 156, 156, 0.52);
+        --color-hover-tab: lightblue;
+        --paper-tab-ink: var(--color-selected);
+      }
+      input {
+        @apply(--paper-font-body2);
+      }
+
+      a.link {
+        color: black;
+        background-color: inherit;
+        display: flex;
+        justify-content: center;
+        text-decoration: none;
+        height: 100%;
+        align-items: center;
+        font-size: 24px;
+        font-weight: bold;
+        transition: color 0.5s;
+      }
+      .language-selector {
+        display: inline-flex;
+
+        position: relative;
+        float: right;
+        margin: 10px 5px;
+      }
+      .name {
+        display: inline-flex;
+      }
+      .middle-header {
+        margin-top: 0;
+        margin-bottom: 12px;
+      }
+      .middle-header, .top-header {
+        /*margin-left: 25%;*/
+        color: white;
+      }
+      .top-header .name {
+        font-size: 6vw;
+      }
+      .middle-header .subtitle {
+        font-size: 3vw;
+      }
+      .bottom-header {
+      }
+
+      .bottom-header paper-tab {
+        background-color: var(--color-background);
+        transition: background-color 0.5s ease;
+      }
+      .bottom-header paper-tab:hover:not(.iron-selected) {
+        background-color: var(--color-hover-tab);
+      }
+      .bottom-header paper-tab.iron-selected {
+        background-color: var(--color-selected);
+      }
+      .bottom-header paper-tab.iron-selected a.link {
+        color: white;
+      }
+      .icon-header {
+        /* height: 100px; */
+        width: 81%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2px;
+      }
+      .icon-header img {
+        width: 100%;
+      }
+      .left-part {
+        width: 20%;
+      }
+      .right-part {
+        width: 78%;
+      }
+      .top-container {
+        width: 100%;
+        display: flex;
+      }
+      span.gray {
+        color: gray;
+      }
+      /*Media queries*/
+      @media (max-width: 600px) {
+        .top-header .name {
+          font-size: 9vw;
+        }
+        .middle-header .subtitle {
+          font-size: 4vw;
+        }
+        .language-selector {
+          display: none;
+        }
+        a.link {
+          font-size: 18px;
+        }
+        .left-part {
+          width: 30%;
+          margin-right: 14px;
+        }
+        .icon-header img {
+          width: 100%;
+        }
+        .icon-header {
+          width: 100%;
+          height: 0;
+        }
+      }
+    </style>
+
+    <div class="top-container">
+      <div class="left-part">
+        <div class="icon-header">
+          <img src="../images/logos/logo_bp_5.PNG" alt="Brainpower Logo"></img>
+        </div>
+      </div>
+
+      <div class="right-part">
+        <div class="top-header">
+          <!--<b class="name"><span class="gray">B</span>rain<span class="gray">P</span>ower
+          </b>-->
+          <b class="name">{{title}}</b>
+          <language-selector lang="{{lang}}" class="language-selector"></language-selector>
+        </div>
+
+        <div class="middle-header">
+          <b class="subtitle">[[getElementByLang(subtitle,lang)]]</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="bottom-header">
+      <paper-tabs selected="{{selected}}" class="custom-link" on-tap="changeTab" no-bar on-mouseover="hover" noink>
+        <paper-tab link><a href="{{baseUrl}}home" class="link">[[getElementByLang(home,lang)]]</a></paper-tab>
+        <!-- <paper-tab link><a href="{{baseUrl}}product" class="link">[[getElementByLang(product,lang)]]</a></paper-tab> -->
+        <paper-tab link><a href="{{baseUrl}}service" class="link">[[getElementByLang(service,lang)]]</a></paper-tab>
+        <paper-tab link><a href="{{baseUrl}}motorsport" class="link">[[getElementByLang(motorsport,lang)]]</a></paper-tab>
+        <paper-tab link><a href="{{baseUrl}}contact" class="link">[[getElementByLang(contact,lang)]]</a></paper-tab>
+      </paper-tabs>
+    </div>
+
+    <audio id="hoverSound">
+      <source src="../assets/hover.mp3" type="audio/mpeg">
+    </audio>
+  </template>
+
+  <script>
+    (function() {
+      'use strict';
+
+      Polymer({
+        is: 'header-bar',
+
+        properties: {
+          greeting: {
+            type: String,
+            value: "BrainPower"
+          },
+          title: {
+            type: String,
+            value: 'BrainPower'  
+          },
+          selected: {
+            type: Number,
+            value: 0
+          },
+          lang: {
+            type: String,
+            notify: true
+          },
+          subtitle: {
+            type: Object,
+            value: {
+              "es": "La energía de la innovación",
+              "en": "The innovation energy"
+            }
+          },
+          home: {
+            type: Object,
+            value: {
+              "es": "Inicio",
+              "en": "Home"
+            }
+          },
+          product: {
+            type: Object,
+            value: {
+              "es": "Productos",
+              "en": "Products"
+            }
+          },
+          service: {
+            type: Object,
+            value: {
+              "es": "Servicios",
+              "en": "Services"
+            }
+          },
+          contact: {
+            type: Object,
+            value: {
+              "es": "Contacto",
+              "en": "Contact"
+            }
+          },
+          motorsport: {
+            type: Object,
+            value: {
+              "es": "Motorsport",
+              "en": "Motorsport"
+            }
+          }
+        },
+        changeTab: function() {
+
+        },
+        hover: function(e) {
+          // this.querySelector('#hoverSound').play();
+          this.shadowRoot.getElementById("hoverSound").play()
+        },
+        getElementByLang: function(elemRecord, currentLang) {
+          return elemRecord[currentLang];
+        }
+
+      });
+    })();
+  </script>
+</dom-module>

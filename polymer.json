@@ -3,5 +3,12 @@
     "rules": [
       "polymer-2"
     ]
-  }
+  },
+  "sources": [
+    "src/**/*",
+    "images/**/*",
+    "assets/**/*",
+    "service-worker.js",
+    "sw-precache-config.js"
+  ]
 }

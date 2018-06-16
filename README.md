@@ -37,3 +37,8 @@ Your application is already set up to be tested via [web-component-tester](https
 ### Install Firebase tools `npm install -g firebase-tools`
 
 ### Deploy `firebase deploy`
+
+# Docker
+Build: `docker build -t brainpower .`
+Run: `docker run --rm --name brain brainpower`
+Stop: `docker stop $(docker ps | grep brain | awk '{ print $1 }')`

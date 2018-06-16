@@ -1,0 +1,7 @@
+.git
+.DS_Store
+.gitignore
+bower_components
+node_modules
+build
+test

@@ -148,7 +148,7 @@
         <paper-tab link><a href="{{baseUrl}}home" class="link">[[getElementByLang(home,lang)]]</a></paper-tab>
         <!-- <paper-tab link><a href="{{baseUrl}}product" class="link">[[getElementByLang(product,lang)]]</a></paper-tab> -->
         <paper-tab link><a href="{{baseUrl}}service" class="link">[[getElementByLang(service,lang)]]</a></paper-tab>
-        <paper-tab link><a href="{{baseUrl}}motorsport" class="link">[[getElementByLang(motorsport,lang)]]</a></paper-tab>
+        <paper-tab link><a href="{{baseUrl}}printing" class="link">[[getElementByLang(printing,lang)]]</a></paper-tab>
         <paper-tab link><a href="{{baseUrl}}contact" class="link">[[getElementByLang(contact,lang)]]</a></paper-tab>
       </paper-tabs>
     </div>
@@ -223,13 +223,18 @@
               "es": "Motorsport",
               "en": "Motorsport"
             }
+          },
+          printing: {
+            type: Object,
+            value: {
+              "es": "Impresión 3D",
+              "en": "3D Printing"
+            }
           }
         },
         changeTab: function() {
-
         },
         hover: function(e) {
-          // this.querySelector('#hoverSound').play();
           this.shadowRoot.getElementById("hoverSound").play()
         },
         getElementByLang: function(elemRecord, currentLang) {

@@ -46,7 +46,7 @@
 
       <template is="dom-repeat" items="{{pictures}}">
         <template is="dom-if" if="{{notEmpty(item.image)}}">
-          <iron-image src="{{item.image}}" preload fade sizing="contain" alt="" class="custom-image"></iron-image>
+          <iron-image src="{{item.image}}" fade sizing="contain" alt="" class="custom-image"></iron-image>
           <b>[[getElementByLang(item.description,lang)]]</b>
         </template>
       </template>
@@ -78,10 +78,7 @@
           return elemRecord[currentLang];
         },
         notEmpty: function(collection) {
-          if(collection != '') {
-            return true;
-          }
-          return false;
+          return collection != '' ? true : false;
         },
       });
     })();

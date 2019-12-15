@@ -1,7 +1,7 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
 <link rel="import" href="gallery-elem.html">
 
-<dom-module id="service-detail">
+<dom-module id="generic-detail">
   <template>
     <style>
       :host {
@@ -9,7 +9,7 @@
       }
     </style>
 
-    <div class="service-detail">
+    <div class="generic-detail">
       <div class="description">
         <b>[[getElementByLang(service.title,lang)]]</b>
         <br>
@@ -26,7 +26,7 @@
       'use strict';
 
       Polymer({
-        is: 'service-detail',
+        is: 'generic-detail',
 
         properties: {
           lang: {

@@ -4,7 +4,7 @@
 <!-- <link rel="import" href="../../bower_components/iron-image/iron-image.html"> -->
 
 
-<dom-module id="service-short">
+<dom-module id="item-preview">
   <template>
     <style>
       :host {
@@ -28,11 +28,11 @@
         height: auto;
         background-color: lightgray;*/
       }
-      .service {
+      .item-preview {
         display: flex;
         justify-content: space-between;
       }
-      .service b {
+      .item-preview b {
         font-size: 2.5vw;
       }
       slider-elem.slider {
@@ -64,7 +64,7 @@
       }
 
       @media (max-width: 700px) {
-        .service {
+        .item-preview {
           display: block;
         }
         .slider {
@@ -76,7 +76,7 @@
           margin-top: 10px;
           border-style: none;
         }
-        .service p {
+        .item-preview p {
           font-size: 20px;
           padding-right: 0;
         }
@@ -94,22 +94,21 @@
         .gallery-container {
           width: 100%;
         }
-        .service b {
+        .item-preview b {
           font-size: 30px;
         }
       }
 
     </style>
 
-    <div class="service">
+    <div class="item-preview">
       <div class="description">
-        <b>[[getElementByLang(service.title,lang)]]</b>
+        <b>[[getElementByLang(item.title,lang)]]</b>
         <br>
-        <p>[[getElementByLang(service.description,lang)]]</p>
+        <p>[[getElementByLang(item.description,lang)]]</p>
       </div>
       <div class="image gallery-container">
-        <div class="path">{{image}}</div>
-        <!-- <iron-image path="{{image}}" preload fade sizing="contain" alt=""></iron-image> -->
+        <iron-image src="{{image}}" preload fade sizing="contain" alt="" class="iron-image-custom"></iron-image>
       </div>
     </div>
   </template>
@@ -119,7 +118,7 @@
       'use strict';
 
       Polymer({
-        is: 'service-short',
+        is: 'item-preview',
 
         properties: {
           lang: {
@@ -127,7 +126,8 @@
             value: 'en',
             notify: true
           },
-          service: Object,
+          item: Object,
+          showImage: Boolean,
           selected: {
             type: String,
             notify: true
@@ -146,30 +146,7 @@
           return elemRecord[currentLang];
         },
         ready: function() {
-          this.image = this.service.images[0].image;
-        },
-        attached: function() {
-          this.createElem()
-        },
-        loadImage: function(element) {
-          if(!this.galleryIsLoaded) {
-            var galleryElem = document.createElement("iron-image")
-            var path = element.shadowRoot.querySelector("div.path")
-            var container = path.parentNode
-            galleryElem.setAttribute("sizing", "contain")
-            galleryElem.setAttribute("preload","")
-            galleryElem.setAttribute("fade","")
-            galleryElem.setAttribute("src",path.innerText)
-            galleryElem.classList.add("iron-image-custom")
-            container.appendChild(galleryElem);
-            this.galleryIsLoaded = true;
-          }
-        },
-        createElem: function() {
-          var serviceShortElem = this
-          if(location.pathname == "/service") {
-            this.loadImage(serviceShortElem);
-          }
+          this.image = this.item.images[0].image;
         },
       });
     })();

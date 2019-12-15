@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "polymer serve --port 3000 --hostname 0.0.0.0",
     "polymer": "polymer",
-    "bower": "bower"
+    "bower": "bower",
+    "firebase": "firebase"
   },
   "author": "stefanoantonel@gmail.com",
   "license": "ISC",

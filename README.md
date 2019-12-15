@@ -9,7 +9,7 @@ First, make sure you have the [Polymer CLI](https://www.npmjs.com/package/polyme
 ## Viewing Your Application
 
 ```
-$ polymer serve
+$ npm run dev (or polymer serve)
 ```
 
 ## Building Your Application
@@ -36,7 +36,7 @@ Your application is already set up to be tested via [web-component-tester](https
 
 ### Install Firebase tools `npm install -g firebase-tools`
 
-### Deploy `firebase deploy`
+### Deploy `npm run firebase deploy`
 
 # Docker
 Build: `docker build -t brainpower .`

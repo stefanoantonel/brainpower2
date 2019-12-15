@@ -1,4 +1,6 @@
 <link rel="import" href="../bower_components/polymer/polymer.html">
+<link rel="import" href="../bower_components/iron-ajax/iron-ajax.html">
+<link rel="import" href="item-preview.html">
 
 <dom-module id="printing-3d">
   <template>
@@ -6,18 +8,39 @@
       :host {
         display: block;
       }
+      index {
+        display: none;
+      }
+      a {
+        text-decoration: inherit;
+        color: inherit;
+      }
       .printing-3d div {
         text-align: center;
       }
     </style>
 
+    <div class="spinner">
+      <h1>Loading...</h1>
+    </div>
+    <iron-ajax
+        auto
+        url='../assets/printing.json'
+        params='{"alt":"json", "q":"chrome"}'
+        handle-as="json"
+        on-response="handleResponse"
+        debounce-duration="300">
+    </iron-ajax>
+
     <div class="printing-3d">
-      <div>
-        <h3>Coming soon ...</h3>
-      </div>
-      <div>
-        <img src="../images/logos/under_construction.png">
-      </div>
+      <template is="dom-repeat" items="{{printinServices}}">
+        <a href="{{baseUrl}}/generic-detail" on-tap="showDetails">
+          <paper-material elevation="1">
+            <index>{{index}}</index>
+            <item-preview showImage="true" item="{{item}}" lang="{{lang}}"></item-preview>
+          </paper-material>
+        </a>
+      </template>
     </div>
   </template>
 
@@ -27,6 +50,47 @@
 
       Polymer({
         is: 'printing-3d',
+
+        properties: {
+          lang: {
+            type: String,
+            value: 'es',
+            notify: true
+          },
+          services: {
+            type: Object
+          },
+          selected: {
+            type: Number,
+            value: 0
+          },
+          galleryIsLoaded: {
+            type: Boolean,
+            value: false
+          }, 
+          title: {
+            type: String
+          },
+
+          galleryElem: String,
+          mainPages: Object,
+          serviceSelected: Object,
+        },
+        handleResponse: function(event, res) {
+          this.printinServices = res.response;
+          this.shadowRoot.querySelector(".spinner").remove();
+        },
+        loadGallery: function(element) {
+          var body = document.getElementsByTagName("home-app")[0].shadowRoot;
+          var detail = body.getElementById("generic-detail");
+          detail.pictures = element.serviceSelected.images;
+          detail.videos = element.serviceSelected.videos;
+        },
+        showDetails: function(e) {
+          var index = e.currentTarget.querySelector("index").innerHTML
+          this.serviceSelected = this.printinServices[index];
+          var gallery = this.loadGallery(this)
+        },
       });
     })();
   </script>

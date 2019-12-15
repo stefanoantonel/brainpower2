@@ -1,0 +1,285 @@
+[
+  {
+    "title": {
+      "es": "Fabricacion De Repuestos",
+      "en": "Spares"
+    },
+    "description": {
+      "es": "Para casos en los que los repuestos de algun producto no se consigan en nuestro país, ya se hayan dejado de producir ó sean excesivamente costosos por su escacez, la Impresión 3D brinda una solución sumamente satisfactoria dando una rápida respuesta ya que la fabricación es inmediata luego de obtener el diseño CAD 3D o luego de haberlo generado a partir del componente dañado o del relevamiento a partir de los componentes con los que se interrelaciona.",
+
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "images/printing/spares/00.png",
+        "description": {
+          "es": "Base para reloj",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Piezas De Serie",
+      "en": ""
+    },
+    "description": {
+      "es": "Cuando se necesita fabricar piezas plásticas en series cortas o medianas, la inyección no es una posibilidad viable dado que el costo de la matricería no llega a amortizarse en la cantidad de piezas necesarias, encareciendo la pieza. Para estas situaciones, imprimirlas en 3D puede ser la mejor solución puesto que no se requiere fabricar una matriz para producirlas. De este modo se reduce notablemente el costo por unidad para cantidades relativamente bajas de la pieza, pero además se acelera el proceso desde el diseño a la producción y como un valor agregado se tiene una flexibilidad ilimitada en lo referente a modificaciones sobre el diseño original, permitiendo realizarlas instantaneamente y aplicar los cambios mientras se produce la pieza.",
+
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Piezas Únicas",
+      "en": ""
+    },
+    "description": {
+      "es": "Para problemas de diseño mecánico, cuando necesite adaptar piezas existentes a su realidad, materialice sus ideas de forma sencilla sin necesidad de pensar en lineas de partición, ángulos de desmoldeo ni otras restricciones de los métodos de fabricación tradicionales.",
+
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Diseño industrial / Diseño Mecánico",
+      "en": ""
+    },
+    "description": {
+      "es": "Deje volar su imaginación y diseñe formas orgánicas geometrías complejas y superficies de curvaturas variables. Utilice el servicio de Impresión 3D de BRAINPOWER para crear prototipos de los diseños y productos que imaginó.",
+
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Educación",
+      "en": ""
+    },
+    "description": {
+      "es": "En integración de personas con discapacidades así como en elementos didácticos en escuelas, universidades y hospitales podemos ver los frutos de la aplicación de estas innovadoras herramientas.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Acabado artístico",
+      "en": ""
+    },
+    "description": {
+      "es": "Si usted lo desea BRAINPOWER, cuenta con el talento de artistas plásticos para dar un acabado a mano de las piezas y dar así una terminación mas realista y un toque único.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Entretenimiento",
+      "en": ""
+    },
+    "description": {
+      "es": "La creación de juguetes, rompecabezas, cubos rubik, juegos de ajedréz y muchas mas opciones lúdicas se ven empoderadas por esta tecnología.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Arte & Deco",
+      "en": ""
+    },
+    "description": {
+      "es": "Pudiendo crear formas únicas y artísticas o generando réplicas exactas de obras maestras del arte, esta tecnología permite una revolución en la decoración y la creación de ambientes o escenarios gracias a su versatilidad y nivel de detalle capaz de reproducir.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Hogar",
+      "en": ""
+    },
+    "description": {
+      "es": "En nuestras casas, aporta soluciones tales como soportes para las llaves, porta cuchillos, embudos, estantes, empujadores de pasta dental y miles de ingeniosas creaciones mas.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Arquitectura",
+      "en": ""
+    },
+    "description": {
+      "es": "Realice maqueteas y modelos arquitectónicos (para entregas, proyectos o trabajos finales de tesis) que no se limiten a placas planas cortadas por laser ensambladas. Deje fluir la creatividad y diseñe piezas curvas, alabeadas, torsionadas y otras formas difíciles de modelar a mano. Luego imprímalas y vea como el diseño que tenía en mente se hace realidad.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Miniaturas",
+      "en": ""
+    },
+    "description": {
+      "es": "",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Usos aptos para alimentos",
+      "en": ""
+    },
+    "description": {
+      "es": "Con materiales como el PETG se pueden fabricar envases para alimentos, luncheras, cortantes para masas, contenedores, vasos, botellas, frascos e inclusos piezas para trabajar pastas y mezclas alimenticias como amasadores, paletas, engranajes, empujadores, embudos, mezcladores y otros elementos que requieran estar en contacto permanente con productos alimenticios.",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Prototipado",
+      "en": ""
+    },
+    "description": {
+      "es": "",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  },
+
+  {
+    "title": {
+      "es": "Personalización y Regalos Empresariales",
+      "en": ""
+    },
+    "description": {
+      "es": "",
+      "en": ""
+    },
+    "images": [
+      {
+        "image": "",
+        "description": {
+          "es": "",
+          "en": ""
+        }
+      }
+    ]
+  }
+]
